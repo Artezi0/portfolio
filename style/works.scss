@@ -1,0 +1,239 @@
+@import'config.scss';
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fff;
+    filter: grayscale(0);
+}
+
+.cursor {
+    left: 10px;
+    width: 20px;
+    z-index: 900;
+    position: fixed;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    background-color: #f3f3f3;
+    transform: translate(-50%, -50%);
+    transition: width .3s, height .3s;
+}
+
+.cursor.state-1 {
+    width: 40px;
+    transition: width .3s, height .3s;
+}
+
+.cursor.state-2 {
+    width: 200px;
+    mix-blend-mode: saturation;
+}
+
+
+//Navbar
+.navbar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    z-index: 800;
+    padding: 1% 5%;
+    position: fixed;
+    user-select: none;
+
+    nav {
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        font-family: 'PP Neue Montreal';
+
+        .logo {
+            height: 100%;
+            display: flex;
+            line-height: 50%;
+            font-size: 1rem;
+            flex-direction: column;
+            justify-content: center;
+
+            b {
+                font-size: 1.2rem;
+            }
+        }
+
+        button {
+            margin: 1% 0;
+            z-index: 790;
+            color: #000;
+            cursor: pointer;
+            font-size: 1.1rem;
+            padding: 8px 25px;
+            border-radius: 300px;
+            background-color: #fff;
+            font-family: 'PP Neue Montreal';
+        }
+        
+        #submenu {
+            top: 10%;
+            width: 8.7%;
+            right: -.5%;
+            height: 80%;
+            z-index: 780;
+            color: #000;
+            position: absolute;
+            border-radius: 300px;
+            background: #fff;
+            opacity: 0%;
+            transition: .5s ease-in-out;
+
+            ul {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                overflow: hidden;
+                padding-left: 2em;
+                position: relative;
+                align-items: center;
+
+                li {
+                    cursor: pointer;
+                    transition: .3s;
+                    margin-left: 10px;
+                    font-size: 1.1rem;
+                    padding-left: 1em;
+
+                    &:hover {
+                        color: var(--onHover);
+                    }
+                }
+
+                button {
+                    width: 10px;
+                    padding: 2% 2%;
+                    aspect-ratio: 1;
+                    margin-left: 25px;
+                    border-radius: 50%;
+                    background: #000;
+                }
+            }
+        }
+
+        #submenu.active {
+            width: 40%;
+            opacity: 1;
+        }
+    }
+}
+
+
+//Works 
+section {
+    width: 100%;
+    height: 100%;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    &__items {
+        color: #fff;
+        text-align: center;
+        font-family: 'PP Neue Montreal';
+
+        h1 {
+            line-height: 80%;
+            font-weight: 400;
+            font-size: 12rem;
+            padding-top: .8em;
+            text-transform: uppercase;
+            font-family: 'Coolvetica';
+
+            span {
+                font-family: 'Space Grotesk';
+            }
+        }
+
+        p {
+            padding-top: 1em;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.footer {
+    width: 100%;
+    height: 100vh;
+
+    &__upper {
+        width: 100%;
+        height: 80%;
+        color: #fff;
+        position: relative;
+
+        h1 {
+            line-height: 75%;
+            font-weight: 400;
+            padding-top: .5em;
+            text-align: center;
+            font-size: 14.5rem;
+            position: relative;
+            font-family: 'Coolvetica';
+
+            &:hover {
+                transition: .3s;
+                color: var(--onHover);
+            }
+        }
+
+        .border {
+            top: 15%;
+            left: 6em;
+            width: 86%;
+            height: 1px;
+            position: absolute;
+            background-color: #666;
+        }
+    }
+
+    &__bottom {
+        width: 100%;
+        height: 20%;
+        color: #666;
+        position: relative;
+
+        ul {
+            padding-top: 1em;
+            font-size: 2rem;
+            text-align: center;
+
+            a {
+                &:hover {
+                    transition: .3s;
+                    color: var(--onHover);
+                }
+            }
+        }
+
+        p {
+            text-align: center;
+            font-family: 'PP Neue Montreal';
+        }
+    
+        .border {
+            top: 8%;
+            left: 6em;
+            width: 86%;
+            height: 1px;
+            position: absolute;
+            background-color: #666;
+        }
+    }
+}
