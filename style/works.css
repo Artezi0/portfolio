@@ -221,32 +221,59 @@ section {
 
 .hero {
   width: 100%;
-  height: 100vh;
-  position: relative;
+  height: 200vh;
 }
 
 .hero__items {
+  width: 100%;
+  height: 100%;
   color: #fff;
-  text-align: center;
+  position: relative;
   font-family: 'PP Neue Montreal';
 }
 
-.hero__items h1 {
-  line-height: 80%;
-  font-weight: 400;
-  font-size: 12rem;
-  padding-top: .8em;
-  text-transform: uppercase;
-  font-family: 'Coolvetica';
+.hero__items__title {
+  top: 0;
+  height: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
 }
 
-.hero__items h1 span {
+.hero__items__title h1 {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 12rem;
+  font-weight: 400;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero__items__title h1:first-child {
   font-family: 'Space Grotesk';
 }
 
+.hero__items__title h1:last-child {
+  padding-right: .24em;
+  font-family: 'Coolvetica';
+  text-transform: uppercase;
+}
+
 .hero__items p {
-  padding-top: 1em;
-  font-size: 1.5rem;
+  top: 23%;
+  right: 3.6%;
+  width: 30%;
+  font-size: 1rem;
+  text-align: justify;
+  position: absolute;
 }
 
 .footer {
