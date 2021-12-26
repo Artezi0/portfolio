@@ -221,7 +221,7 @@ section {
 
 .hero {
   width: 100%;
-  height: 200vh;
+  height: 100vh;
 }
 
 .hero__items {
@@ -233,28 +233,35 @@ section {
 }
 
 .hero__items__title {
-  top: 0;
-  height: 30%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  width: 100%;
+  height: 100%;
+  padding-top: 6em;
   position: relative;
+  text-align: center;
 }
 
 .hero__items__title h1 {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   font-size: 12rem;
   font-weight: 400;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  position: relative;
+  margin-bottom: -.5em;
+}
+
+.hero__items__title li {
+  top: 80%;
+  left: 50%;
+  width: 12%;
+  color: #000;
+  position: absolute;
+  padding: 15px 35px;
+  border-radius: 300px;
+  background-color: #fff;
+  -webkit-transform: translate(-50%, -80%);
+          transform: translate(-50%, -80%);
+}
+
+.hero__items__title li a {
+  font-size: 1.1rem;
 }
 
 .hero__items__title h1:first-child {
@@ -267,13 +274,14 @@ section {
   text-transform: uppercase;
 }
 
-.hero__items p {
-  top: 23%;
-  right: 3.6%;
+.hero__items__title p {
+  top: 40%;
   width: 30%;
+  right: 3.6%;
   font-size: 1rem;
-  text-align: justify;
+  font-weight: 400;
   position: absolute;
+  text-align: justify;
 }
 
 .footer {
