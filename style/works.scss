@@ -173,6 +173,16 @@ section {
             height: 156px;
             overflow: hidden;
             position: absolute;
+            
+            img {
+                filter: grayscale(100);
+                transition: .3s ease-in-out;
+
+                &:hover {
+                    filter: grayscale(0);
+                    transform: scale(1.2);
+                }
+            }
         }
 
         p {
