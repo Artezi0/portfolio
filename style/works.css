@@ -281,6 +281,74 @@ section {
   position: absolute;
 }
 
+.gallery {
+  width: 100%;
+  height: 150vh;
+}
+
+.gallery__list {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 5%;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gallery__list li {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 2em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #666;
+}
+
+.gallery__list li a {
+  color: #fff;
+  font-weight: 400;
+  padding-left: 5%;
+  font-size: 7.5rem;
+  position: relative;
+  text-decoration: none;
+  font-family: 'PP Neue Montreal';
+}
+
+.gallery__list li a::before {
+  top: 50%;
+  left: 0%;
+  color: #fff;
+  content: '2021';
+  font-size: 1.1rem;
+  position: absolute;
+  font-style: italic;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+}
+
+.gallery__list li h2 {
+  right: 5%;
+  color: #fff;
+  font-weight: 400;
+  font-size: 7.5rem;
+  position: absolute;
+  font-family: 'PP Neue Montreal';
+}
+
 .footer {
   width: 100%;
   height: 100vh;

@@ -8,9 +8,11 @@ function showMenu() {
     submenu.classList.toggle('active')
 
     if (submenu.classList.contains('active')) {
+        submenu.style.transition = "all 0.5s";
         submenuBtn.style.backgroundColor = 'black'
         submenuBtn.style.color = 'white'
     } else {
+        submenu.style.transition = "all 0.5s";
         submenuBtn.style.backgroundColor = 'white'
         submenuBtn.style.color = 'black'
     }
