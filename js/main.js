@@ -1,4 +1,5 @@
 let links = Array.from(document.querySelectorAll("button, a"))
+let items = document.querySelectorAll (".gallery__list, li")
 let images = Array.from(document.querySelectorAll("img"))
 let submenuBtn = document.getElementById('submenu-btn')
 let submenu = document.getElementById('submenu')
@@ -45,5 +46,39 @@ images.forEach (image => {
     })
 })
 
+items.forEach(item => {
+
+    const parent = item.parentElement, photo = item.querySelector('.photo');
+    
+    item.addEventListener('mousemove', function(event){
+        parent.classList.add('active');
+        photo.classList.add('active');
+
+        const cursorX = event.pageX,
+              cursorY = event.pageY;
+
+        const itemLeft =  item.getBoundingClientRect().left,
+              itemTop = item.getBoundingClientRect().top;
+
+        const photoPositionX = cursorX - itemLeft;
+        const yphotoPositionY = cursorY - itemTop - window.scrollY;
+
+        if(photo.offsetHeight + 40 > event.clientY){
+            photo.style.top = `${yphotoPositionY + 20}px`;
+        } else { 
+            photo.style.top = `${yphotoPositionY - photo.offsetHeight - 20}px`;
+        }
+
+        photo.style.left = `${photoPositionX + 20}px`;
+    });
+
+    item.addEventListener('mouseleave', ()=>{
+        parent.classList.remove('active');
+        photo.classList.remove('active');
+    });
+});
+
+
 luxy.init()
   
+
