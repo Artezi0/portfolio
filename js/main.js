@@ -1,5 +1,5 @@
 let links = Array.from(document.querySelectorAll("button, a"))
-let items = document.querySelectorAll (".gallery__list, li")
+const items = document.querySelectorAll (".gallery__list, li")
 let images = Array.from(document.querySelectorAll("img"))
 let submenuBtn = document.getElementById('submenu-btn')
 let submenu = document.getElementById('submenu')
@@ -72,7 +72,7 @@ items.forEach(item => {
         photo.style.left = `${photoPositionX + 20}px`;
     });
 
-    item.addEventListener('mouseleave', ()=>{
+    item.addEventListener('mouseout', ()=>{
         parent.classList.remove('active');
         photo.classList.remove('active');
     });
