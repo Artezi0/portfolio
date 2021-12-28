@@ -214,6 +214,34 @@ button {
   opacity: 1;
 }
 
+section {
+  width: 100%;
+  height: 100%;
+}
+
+.info {
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  font-family: 'PP Neue Montreal';
+}
+
+.info h1 {
+  padding-top: 20%;
+  font-size: 10rem;
+  font-weight: 400;
+  line-height: 30%;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Coolvetica';
+}
+
+.info h1 span {
+  font-size: 2rem;
+  text-transform: none;
+  font-family: 'PP Neue Montreal';
+}
+
 .footer {
   width: 100%;
   height: 100vh;
