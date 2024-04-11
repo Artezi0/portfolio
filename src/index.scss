@@ -1,0 +1,104 @@
+@import 'asset.scss';
+
+// JUST SOME DEFAULT STYLING
+:root {
+  font-family: MontrealReg, Inter, system-ui;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: $black;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  user-select: none;
+}
+
+// MAIN STYLING
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+
+  main {
+    margin: 6em 30%;
+  }
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.intro {
+  &_heading {
+    font-family: MontrealBold;
+  }
+
+  &_socials {
+    padding-left: 2em;
+    display: flex;
+    flex-direction: column;
+    list-style-type: "∗ ";
+    gap: 5px;
+  }
+
+  &_desc, &_subheading {
+    font-size: 16px;
+    font-family: InterphasesReg;
+    color: lightgray;
+    text-transform: uppercase;
+    
+    b {
+      color: white;
+    }
+
+    .btn {
+      margin: 0 2px;
+    }
+  }
+}
+
+small {
+  color: grey;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: gray;
+  
+  &:hover {
+    text-decoration: underline;
+    color: $orange;
+  }
+}
+
+.btn {
+  width: fit-content;
+  padding: 1px 5px 1px 5px;
+  background-color: $darkGrey;
+  border-radius: 2px;
+  font-family: MontrealReg;
+  text-transform: none;
+  color: gray;
+
+  &_img {
+    margin-right: 5px;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
